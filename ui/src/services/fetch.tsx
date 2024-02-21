@@ -12,7 +12,7 @@ const getAllTodos = () => {
   const req = axios.get(todoUrl);
   return req.then((response) => response.data);
 
-}
+};
 
 const postTodoList = (newObject: TodoList) => {
   const req = axios.post(listsUrl, newObject);
