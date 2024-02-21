@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://noycetodos.vercel.app/',
+        target: 'https://noycetodos.vercel.app',
         changeOrigin: true,
       },
     }
