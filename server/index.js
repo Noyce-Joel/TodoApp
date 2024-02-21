@@ -6,10 +6,9 @@ const TodoList = require("./models/todoList");
 const cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose");
-const url =
-  process.env.MONGODB_URI
+const url = process.env.MONGODB_URI;
 
-  mongoose.connect(url);
+mongoose.connect(url);
 
 const requestLogger = (req, res, next) => {
   console.log("Method:", req.method);
@@ -33,7 +32,7 @@ const errorHandler = (error, req, res, next) => {
 };
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, "dist") ));
+app.use(express.static("dist"));
 app.use(express.json());
 
 app.use(requestLogger);
@@ -61,8 +60,7 @@ app.get("/api/todos", (req, res) => {
     .catch((error) => {
       res.status(500).send("Error: " + error);
     });
-}
-);
+});
 
 app.get("/api/todoLists/:id", (req, res) => {
   const id = req.params.id;
@@ -220,4 +218,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });
-module.exports = app
+module.exports = app;
