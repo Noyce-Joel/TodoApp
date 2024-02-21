@@ -1,8 +1,8 @@
 import axios from "axios";
 import { TodoItem, TodoList } from "../App";
 
-const listsUrl = "api/todoLists";
-const todoUrl = "api/todos";
+const listsUrl = "/api/todoLists";
+const todoUrl = "/api/todos";
 const getAllTodoLists = () => {
   const req = axios.get(listsUrl);
   return req.then((response) => response.data);
