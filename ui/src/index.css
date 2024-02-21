@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: white;
+  background-color: #2f3340;
+  overflow-y: hidden;
+  font-family: monospace;
+  vertical-align: middle;
+  line-height: 2;
+}
+
+.open-menu {
+  border: 1px solid #fff;
+  border-color: #fff;
+
+  transition: 1s ease-in-out;
+}
+
+.close-menu {
+  border: 1px solid #2f334000;
+
+  transition: 0.2s ease-in-out;
+}
+
+.close-menu-high {
+  border: 1px solid rgba(239, 68, 68, 0.25);
+
+  transition: 0.2s ease-in-out;
+}
+
+
+.todo {
+  width: 100%
+}
+
+
+
+@keyframes shake {
+  
+  0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  25% { transform: translateY(0px) translateX(4px) rotate(10deg); }
+  40% { transform: translateY(0px) translateX(-4px) rotate(-10deg); }
+  
+  50% { transform: translateY(0px) translateX(4px) rotate(10deg); }
+  60% { transform: translateY(0px) translateX(-4px) rotate(-10deg); }
+  75% { transform: translateY(0px) translateX(4px) rotate(10deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  
+}
+
+
+
+.trophy-completed {
+
+  animation: shake 1s ease-in-out ;
+
+  
+}
+
+.trophy-completed:hover {
+  animation: shake 1s infinite;
+
+}
+
