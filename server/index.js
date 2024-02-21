@@ -35,7 +35,6 @@ const errorHandler = (error, req, res, next) => {
 app.use(cors());
 app.use(express.json());
 app.use(express.static("dist"));
-
 app.use(requestLogger);
 
 app.get("/", (req, res) => {
@@ -220,3 +219,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });
+module.exports = app
